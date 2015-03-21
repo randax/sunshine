@@ -35,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.v(LOG_TAG, "in create");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
@@ -81,6 +82,34 @@ public class MainActivity extends ActionBarActivity {
             Log.d(LOG_TAG, "Couldn't call " + location + ", no reciving apps installed");
         }
 
+    }
+    @Override
+    protected void onStart(){
+        Log.v(LOG_TAG, "in onstart");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume(){
+        Log.v(LOG_TAG,"in onresume");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause(){
+        Log.v(LOG_TAG, "in onpause");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.v(LOG_TAG, " in onstop");
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy(){
+        Log.v(LOG_TAG, "in ondestroy");
+        super.onDestroy();
     }
 
     /**
